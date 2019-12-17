@@ -37,7 +37,7 @@ class App extends Component {
   addTodo = (title) => {
     Axios.post('https://jsonplaceholder.typicode.com/todos',{
       title,
-      component:false
+      completed:false
     }).then(res=>this.setState({ todos: [...this.state.todos, res.data] }))
   }
 
